@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
     const characters = await Character.findAll()
     res.render('template', {
         locals: {
-            character: characters[0],
+            characters
         }
     })});
 

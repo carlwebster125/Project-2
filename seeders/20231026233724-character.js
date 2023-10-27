@@ -13,6 +13,20 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: "Squirtle",
+          type: "Water",
+          weakness: "Grass",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Bulbasaur",
+          type: "Grass",
+          weakness: "Fire",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
