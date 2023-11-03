@@ -5,4 +5,7 @@ router
     .route('/characters')
     .get(characterController.getAll)
 
+router
+    .route('/my-characters').get(characterController.getAllByUserId);
+
 module.exports = router;
