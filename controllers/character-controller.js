@@ -8,6 +8,10 @@ module.exports = {
         locals: {
           characters,
         },
+        partials: {
+          partial: "/partials/characters",
+//          partial: "/partials/favorites",
+        },
       });
     } catch (e) {
       console.log(e);
