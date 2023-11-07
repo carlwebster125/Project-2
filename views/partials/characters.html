@@ -1,0 +1,11 @@
+<div>
+    ${characters.map((character) => `
+    <div>
+      <h1>${character.name}</h1>
+
+      <h2>${character.type}</h2>
+
+      <h3>${character.weakness}</h3>
+    </div>
+    `).join('')}
+  </div>
