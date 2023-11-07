@@ -13,6 +13,7 @@ app.set('view engine', 'html');
 app.use(characterRouter);
 app.use(express.static('public'));
 app.use(express.json());
+app.use(userRouter);
 
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
