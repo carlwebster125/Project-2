@@ -17,6 +17,12 @@ const characterRouter = require('./routes/characters');
 store.sync();
 
 
+const indexRouter = require('./routes');
+
+app.use(express.static('public'));
+app.use(express.json());
+
+
 app.engine('html', es6Renderer);
 app.set('views', 'views');
 app.set('view engine', 'html');
@@ -36,9 +42,9 @@ app.use(
 );
 
 
+app.use(indexRouter);
 app.use(characterRouter);
-app.use(express.static('public'));
-app.use(express.json());
+
 
 app.use(userRouter);
 
