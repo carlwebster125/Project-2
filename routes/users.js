@@ -9,7 +9,7 @@ router
         loggedIn: false,
       },
       partials: {
-        content: '/partials/login',
+        content: '/views/login',
       },
     });
   })
@@ -23,7 +23,7 @@ router
         loggedIn: false,
       },
       partials: {
-        content: '/partials/register',
+        content: '/views/register',
       },
     });
   })

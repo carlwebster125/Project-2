@@ -19,7 +19,7 @@ module.exports = {
         }
       });
     } catch {
-      // handle error
+      
     }
   },
 
