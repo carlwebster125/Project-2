@@ -1,8 +1,11 @@
 const router = require('express').Router();
 const characterController = require('../controllers/character-controller');
+const { checkAuth } = require('../middlewares/auth');
 
-router
-    .route('/characters')
-    .get(characterController.getAll)
+
+router.route('/characters').get(checkAuth, charaterController.getAll);
+
+
+outer.route('/characters').get(checkAuth, charaterController.getAllByUserId);
 
 module.exports = router;
