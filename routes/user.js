@@ -4,12 +4,12 @@ const userController = require('../controllers/user-controller');
 router
   .route('/login')
   .get((req, res) => {
-    res.render('template', {
+    res.render('login', {
       locals: {
         loggedIn: false,
       },
       partials: {
-        content: '/views/login',
+        content: 'login',
       },
     });
   })
@@ -18,12 +18,12 @@ router
 router
   .route('/register')
   .get((req, res) => {
-    res.render('template', {
+    res.render('register', {
       locals: {
         loggedIn: false,
       },
       partials: {
-        content: '/views/register',
+        content: 'register',
       },
     });
   })

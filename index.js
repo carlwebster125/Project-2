@@ -7,7 +7,8 @@ const es6Renderer = require('express-es6-template-engine');
 const db = require('./models');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const store = new SequelizeStore({ db: db.sequelize });
-
+const dotenv = require("dotenv");
+dotenv.config()
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT;

@@ -26,7 +26,7 @@
             <a class="nav-link" href="#">Favorites</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="/login">Login</a>
           </li>
           
          
@@ -38,7 +38,7 @@
   
 <!-- //end of nav bar. -->
 <div class="card-group">
-${charactersTosend.map((character) => `
+  ${charactersToSend.map((character) => `
     <div class="card" style="width: 18rem;">
       <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
@@ -47,7 +47,8 @@ ${charactersTosend.map((character) => `
        
       </div>
     </div>
-  `).join('')}
+  `).join("")}
+
 </div>
 
 

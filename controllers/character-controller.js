@@ -1,5 +1,4 @@
 const { Character, User } = require("../models");
-const userId = req.session.user.id;
 
 module.exports = {
   async getAll(req, res) {
@@ -11,7 +10,7 @@ module.exports = {
         },
         partials: {
           partial: "/partials/characters",
-//          partial: "/partials/favorites",
+          //          partial: "/partials/favorites",
         },
       });
     } catch (e) {
@@ -20,10 +19,11 @@ module.exports = {
     }
   },
   async getAllByUserId(req, res) {
-    const id = 1;
+    const userId = req.session.user.id;
+ 
 
     try {
-      const user = await User.findByPk(id, {
+      const user = await User.findByPk(userId, {
         order: [[{ model: Character, as: "characters" }, "name", "asc"]],
         include: {
           model: Character,

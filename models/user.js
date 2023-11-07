@@ -22,8 +22,13 @@ module.exports = (sequelize, DataTypes) => {
       lastName: DataTypes.STRING,
       email: DataTypes.STRING,
       password: DataTypes.STRING,
+    },{
+    hooks:{
+      async beforeCreate(user) {
+        user.password = await bcrypt.hash(user.password,10);
+      },
     },
-    {
+    
       sequelize,
       modelName: "User",
     }
