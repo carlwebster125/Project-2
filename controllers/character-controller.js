@@ -1,5 +1,6 @@
 const { Character } = require("../models");
 
+
 module.exports = {
   async getAll(req, res) {
     try {

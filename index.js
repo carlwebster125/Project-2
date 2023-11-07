@@ -14,18 +14,32 @@ const port = process.env.PORT;
 
 const characterRouter = require('./routes/characters');
 
-
+store.sync();
 
 
 app.engine('html', es6Renderer);
 app.set('views', 'views');
 app.set('view engine', 'html');
 
+app.use(cookieParser());
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    store,
+    cookie: {
+      secure: false,
+      maxAge: 2592000,
+    },
+  })
+);
+
+
 app.use(characterRouter);
 app.use(express.static('public'));
 app.use(express.json());
 
-app.use(indexRouter);
 app.use(userRouter);
 
 
