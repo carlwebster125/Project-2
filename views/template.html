@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -17,5 +18,14 @@
       </div>
       `).join('')}
     </div>
+    <nav class="navbar navbar-light bg-light p-2 justify-content-between">
+      <a class="navbar-brand" href="/">Stock Tracker</a>
+      ${loggedIn ? `<a class="navbar-brand" href="/logout">Log Out</a>` : `<a
+        class="navbar-brand"
+        href="/login"
+        >Log In</a
+      >` }
+    </nav>
+    ${content}
   </body>
 </html>
