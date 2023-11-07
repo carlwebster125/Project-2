@@ -1,5 +1,5 @@
 const { Character } = require("../models");
-
+const userId = req.session.user.id;
 
 module.exports = {
   async getAll(req, res) {
