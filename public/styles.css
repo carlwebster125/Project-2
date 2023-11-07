@@ -1,0 +1,6 @@
+body{background-image:url('./image.png') ;}
+.Title{
+  font-size:60px;
+  font-family: 'Indie Flower', cursive;
+}
+.Pokemon-image{width:100px}
