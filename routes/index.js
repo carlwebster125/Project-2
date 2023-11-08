@@ -6,13 +6,13 @@ router.get("/", async (req, res) => {
     const characters = await Character.findAll();
     const charactersToSend = characters.slice(0, 3);
     // console.log(charactersToSend);
-    res.render("home", {
+    res.render("template", {
       locals: { 
         charactersToSend,
        loggedIn: req.session.user,
       },
       partials: {
-        partial: "home",
+        partial: "/partials/home",
 //        partial: "/partials/favorites",
       },
     });
