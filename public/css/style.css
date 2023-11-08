@@ -1,9 +1,19 @@
 body {
-    margin: 0;
-  }
-  
-  .login-container,
-  .register-container {
-    margin: 5rem auto;
-    width: 500px;
-  }
+  margin: 0;
+  background-image: url('./image.png');
+}
+
+.login-container,
+.register-container {
+  margin: 5rem auto;
+  width: 500px;
+}
+
+.Title {
+  font-size: 60px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.Pokemon-image {
+  width: 100px
+}
